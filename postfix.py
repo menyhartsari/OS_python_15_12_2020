@@ -22,14 +22,8 @@ def eval_expr(s,d={}):
 			B=list.pop()
 			C=B//A
 			list.append(C)
-		elif i=="x":
-			i=d["x"]
-			i=int(i)
-			list.append(i)
-		elif i=="y":
-			i=d["y"]
-			i=int(i)
-			list.append(i)
+		elif i.isalpha():
+			list.append(d[i])
 		else:
 			i=int(i)
 			list.append(i)
